@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Propose Day 💍</title>
+  <link rel="stylesheet" href="../style.css">
+          <style>
+    body {
+      background-image: url('../images/bg-propose.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Happy Propose Day 💍💖</h1>
+
+  <p class="big-text">
+    Like Chandler to Monica… 🥺💛  
+    I’m terrible at speeches…  
+    But amazing at loving you 😘  
+
+    <br><br>
+
+    So… I wrote you something special 💌
+  </p>
+
+  <!-- Buttons -->
+  <div class="buttons">
+
+    <a href="../index.html" class="btn">⬅ Back</a>
+
+    <button class="btn" onclick="openLetter()">
+      💍 Watch Proposal
+    </button>
+
+  </div>
+
+</div>
+
+<!-- Proposal Letter Popup -->
+<div class="letter-overlay" id="letterBox">
+
+  <div class="letter-card">
+
+    <h2>💖 My Love 💖</h2>
+
+    <p class="letter-text">
+
+      If you are not busy for the next  
+      <b>80–90 years</b> 😘  
+      would you be my…  
+      (I want to say wife 🥺💍  
+      but let me earn that ring first 😌❤️)  
+      my partner for life? 💞
+
+
+      📜 <b>What I Offer You:</b>
+
+      💖 Unlimited Love  
+      💕 My Entire Heart is Yours  
+      🫶 I’ll Love You Like You Deserve  
+      🌸 Low Maintenance (Promise 😜)  
+      🤗 I’ll Understand You When No One Does  
+      🛡️ I’ll Always Be On Your Side  
+      🌙 I’ll Never Sleep Angry With You  
+      ❤️ I’ll Always Choose You  
+      🧸 I’ll Protect Your Inner Child  
+      💪 I’ll Carry You in My Arms  
+      😊 Your Happiness = My Mission  
+      🎁 All Your Wishes = My Duty  
+      😝 All Your Silly Things = Approved  
+      👶 I’ll Always Baby You  
+      🌧️ I’ll Hold You in Your Lows  
+      🌈 And Celebrate Your Highs  
+
+      📌 (There’s more…  
+      but I don’t want Gmail to crash 😆❤️)
+
+
+      ⚠️ <b>Terms & Conditions 😜</b>
+
+      💬 I’ll need some attention sometimes  
+      🧠 I may not understand everything  
+      (Please teach me 🥺❤️)  
+      🤯 I overthink a lot… handle me gently 😌  
+      💔 I can’t stay without you  
+      So please never leave me 😭💞  
+      😤 I get angry sometimes (rarely)  
+      If I do, just remind me  
+      that I love you too much to be angry 💛  
+
+      At the end of everything…  
+      I choose you.  
+      Today. Tomorrow. Always. 💍💖  
+
+      Yours Forever,  
+      💛 Your Chandler 😘
+
+    </p>
+
+    <button class="btn close-btn" onclick="closeLetter()">
+      Close 💖
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+
+function openLetter(){
+  document.getElementById("letterBox").classList.add("show");
+}
+
+function closeLetter(){
+  document.getElementById("letterBox").classList.remove("show");
+}
+
+</script>
+
+</body>
+</html>

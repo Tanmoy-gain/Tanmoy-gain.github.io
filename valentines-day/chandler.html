@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💛</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      background-image: url('../images/bg-chandler.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>
+    Okay… No jokes now 🥺<br>
+    Just Chandler talking…
+  </h1>
+
+  <p class="long-text">
+
+    "I’m not great at advice…  
+    Can I interest you in a sarcastic comment?"
+
+    <br><br>
+
+    But with you… I promise 💍  
+    I’ll be there for you.  
+    In every laugh, every fight,  
+    every bad day and every good one ❤️
+
+    <br><br>
+
+    Like Chandler to Monica…  
+    I choose you. Always. 💖
+
+  </p>
+
+  <div class="video-image-wrapper">
+
+    <!-- Background Image -->
+    <img src="../images/chandler.jpg" class="bg-image blurred" id="bgImg">
+
+    <!-- Video -->
+    <video
+    id="introVideo"
+    class="overlay-video"
+    playsinline
+    preload="auto"
+    >
+
+      <source src="video/message.mp4" type="video/mp4">
+    </video>
+
+    <!-- Audio -->
+    <audio id="voice-audio">
+      <source src="music/chandler.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Button -->
+    <button id="music-toggle" onclick="toggleVoice()">
+      ▶
+    </button>
+
+  </div>
+  <p><a href="final.html" class="btn" id="nextBtn">
+    Next ➜
+  </a></p>
+
+  
+
+</div>
+
+<script>
+
+const video = document.getElementById("introVideo");
+const bgImg = document.getElementById("bgImg");
+const btn = document.getElementById("music-toggle");
+const audio = document.getElementById("voice-audio");
+const nextBtn = document.getElementById("nextBtn");
+
+/* Hide buttons at start */
+btn.style.display = "none";
+nextBtn.style.display = "none";
+
+/* Reset video on load (important for reload) */
+window.addEventListener("load", ()=>{
+
+  video.pause();
+  video.currentTime = 0;
+  video.load();
+
+});
+
+/* Click video to play */
+video.addEventListener("click", ()=>{
+
+  if(video.paused){
+    video.play();
+  }
+
+});
+
+/* When video ends */
+video.addEventListener("ended", ()=>{
+
+  // Fade video
+  video.classList.add("hide-video");
+  bgImg.classList.remove("blurred");
+
+  // Start voice automatically
+  audio.play().then(()=>{
+    btn.textContent = "⏸";
+  }).catch(()=>{
+    console.log("Audio autoplay blocked");
+  });
+
+  // Show buttons after fade
+  setTimeout(()=>{
+
+    video.style.display = "none";
+
+    btn.style.display = "flex";
+    nextBtn.style.display = "block";
+
+  },800);
+
+});
+
+
+/* Audio Toggle */
+function toggleVoice(){
+
+  if(audio.paused){
+    audio.play();
+    btn.textContent = "⏸";
+  }else{
+    audio.pause();
+    btn.textContent = "▶";
+  }
+
+}
+
+</script>
+
+
+</body>
+</html>
