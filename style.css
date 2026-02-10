@@ -378,3 +378,42 @@ h1 {
 .close-btn{
   margin-top:20px;
 }
+
+/* Promise Image Wrapper */
+
+.promise-wrapper{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tap Text */
+
+.tap-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+
+  padding: 10px 18px;
+  border-radius: 25px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  animation: pulse 1.5s infinite;
+
+  pointer-events: none;
+}
+
+/* Pulse Animation */
+
+@keyframes pulse{
+  0%{transform:translate(-50%,-50%) scale(1);}
+  50%{transform:translate(-50%,-50%) scale(1.1);}
+  100%{transform:translate(-50%,-50%) scale(1);}
+}

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Promise Day 🤝</title>
   <link rel="stylesheet" href="../style.css">
-    <!-- <style>
+    <style>
     body {
       background-image: url('../images/bg-promise.jpg');
       background-repeat: no-repeat;
@@ -13,7 +13,7 @@
       margin: 0;
       height: 100vh;
     }
-  </style> -->
+  </style>
 </head>
 <body>
 
@@ -42,6 +42,83 @@
   <a href="../index.html" class="btn">⬅ Back</a>
 
 </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise Day 🤝</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Happy Promise Day 🤝💖</h1>
+
+  <p class="big-text">
+    I promise… 🥺💛 
+    To always stand by you ❤️  
+    To support you no matter the situation 💪  
+    To annoy you our entire life😜  
+    To love you forever till this heart stops beating and the lungs can't breathe anymore💍💕
+  </p>
+
+  <!-- Image + Audio -->
+  <div class="promise-wrapper">
+
+    <!-- Image -->
+    <img
+      src="../images/promise.jpg"
+      class="page-image"
+      id="promiseImg"
+      alt="Promise Image"
+    >
+
+    <!-- Tap Overlay -->
+    <div class="tap-text" id="tapText">
+      💬 Tap on me
+    </div>
+
+    <!-- Audio -->
+    <audio id="promiseAudio">
+      <source src="../music/promise.ogg" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+  <p class="quote">
+    “I’ll be there for you… Always.” 💛
+  </p>
+
+  <a href="../index.html" class="btn">⬅ Back</a>
+
+</div>
+
+<script>
+
+const img = document.getElementById("promiseImg");
+const audio = document.getElementById("promiseAudio");
+const tap = document.getElementById("tapText");
+
+/* Play audio on image click */
+img.addEventListener("click", ()=>{
+
+  audio.play().then(()=>{
+
+    // Hide popup after play
+    tap.style.display = "none";
+
+  }).catch(()=>{
+    console.log("Audio blocked");
+  });
+
+});
+
+</script>
 
 </body>
 </html>
